@@ -33,6 +33,14 @@ $(document).ready(function() {
       $('.ryu-throwing').hide();
       $('.ryu-cool').show();
     }
+  })
+  .keyup(function(e) {
+    if (88 == e.which) {
+      $('.ryu-cool').hide();
+      $('.ryu-still').show();
+      $('.ryu-ready').show();
+      $('.ryu-throwing').show();
+    }
   });
 });
 
