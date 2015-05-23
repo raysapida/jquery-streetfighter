@@ -15,6 +15,7 @@ body {
 .ryu {
   width: 659px;
   height: 494px;
+  float: left;
 }
 
 .ryu-ready, .ryu-still, .ryu-throwing {
@@ -50,4 +51,7 @@ body {
   float: left;
   position: absolute;
   z-index: 10;
+  top: 170px;
+  left: 600px;
+  float: left;
 }
