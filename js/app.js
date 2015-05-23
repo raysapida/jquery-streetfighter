@@ -28,7 +28,10 @@ $(document).ready(function() {
   });
   $(document).keydown(function(e) {
     if (88 == e.which) {
-      alert('x was pressed');
+      $('.ryu-still').hide();
+      $('.ryu-ready').hide();
+      $('.ryu-throwing').hide();
+      $('.ryu-cool').show();
     }
   });
 });
