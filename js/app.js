@@ -28,18 +28,24 @@ $(document).ready(function() {
   });
   $(document).keydown(function(e) {
     if (88 == e.which) {
-      $('.ryu-still').hide();
-      $('.ryu-ready').hide();
-      $('.ryu-throwing').hide();
+      if ($('.ryu-ready').is(':visible')){
+        $('.ryu-ready').hide();
+      } else if ( $($('.ryu-throwing').is(':visible')) ) {
+        $('.ryu-throwing').hide();
+      } else {
+        $('.ryu-still').hide();
+      }
       $('.ryu-cool').show();
     }
   })
   .keyup(function(e) {
     if (88 == e.which) {
+      if ($('.ryu').mouseenter()) {
+        $('.ryu-ready').show();
+      } else {
+        $('.ryu-still').show();
+      }
       $('.ryu-cool').hide();
-      $('.ryu-still').show();
-      $('.ryu-ready').show();
-      $('.ryu-throwing').show();
     }
   });
 });
